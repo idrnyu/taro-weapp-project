@@ -1,7 +1,7 @@
 <!--
  * @Created: gongyu
  * @Date: 2023-10-10 11:47:15
- * @LastEditTime: 2023-10-12 17:38:32
+ * @LastEditTime: 2023-10-12 17:49:14
  * @Descripttion: xxx
 -->
 <script setup lang="ts">
@@ -53,6 +53,7 @@ definePageConfig({
           <text class="step-hint__text">参与活动得优惠</text>
         </view>
       </view>
+      <nut-button size="large" type="primary" class="qr-code__btn">大号按钮</nut-button>
     </view>
   </view>
 </template>

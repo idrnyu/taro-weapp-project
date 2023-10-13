@@ -5,7 +5,8 @@
   .user-auth__wrap {
     // 元素大小 * (375 / 设计稿宽度) = rpx
     // margin: 1.5rem;
-    margin-top: 174px;
+    // margin-top: 174px;
+    margin-top: 150px;
     box-sizing: border-box;
     height: 210px;
     width: 670px;
@@ -59,7 +60,8 @@
     }
   }
   .qr-code-step__wrap {
-    margin-top: 248px;
+    // margin-top: 248px;
+    margin-top: 220px;
     padding: 32px 54px 44px;
     box-sizing: border-box;
     // height: 210px;
@@ -105,6 +107,9 @@
           margin-top: 8px;
         }
       }
+    }
+    .qr-code__btn {
+      margin-top: 44px;
     }
   }
 }

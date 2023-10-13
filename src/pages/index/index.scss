@@ -5,8 +5,8 @@
   .user-auth__wrap {
     // 元素大小 * (375 / 设计稿宽度) = rpx
     // margin: 1.5rem;
-    // margin-top: 174px;
-    margin-top: 150px;
+    margin-top: 174px;
+    // margin-top: 150px;
     box-sizing: border-box;
     height: 210px;
     width: 670px;
@@ -60,11 +60,10 @@
     }
   }
   .qr-code-step__wrap {
-    // margin-top: 248px;
-    margin-top: 220px;
+    margin-top: 248px;
+    // margin-top: 220px;
     padding: 32px 54px 44px;
     box-sizing: border-box;
-    // height: 210px;
     width: 670px;
     border-radius: 40px;
     background-color: rgba(221, 235, 235, 1);
@@ -74,9 +73,11 @@
       &::before,
       &::after {
         content: "";
-        border: 1px solid red;
         width: 118px;
-        display: inline-block;
+        height: 4px;
+        border-top: 1px solid #797979;
+        box-sizing: border-box;
+        display: block;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -108,8 +109,26 @@
         }
       }
     }
-    .qr-code__btn {
+    .qr-code__wrap {
       margin-top: 44px;
+      .not-auth__btn,
+      .qr-code__btn {
+        height: 108px;
+        border-radius: 160rpx;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.349019607843137);
+        color: #8A5A37;
+        font-size: 36px;
+        font-weight: bold;
+      }
+      .not-auth__btn {
+        background-color: rgba(215, 215, 215, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .qr-code__btn {
+        background: linear-gradient(269.854963706987deg, rgba(243, 212, 152, 1) 0%, rgba(240, 178, 113, 1) 99%)
+      }
     }
   }
 }

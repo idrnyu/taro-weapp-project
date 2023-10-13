@@ -1,8 +1,8 @@
 /*
  * @Created: gongyu
  * @Date: 2023-10-10 11:47:15
- * @LastEditTime: 2023-10-11 08:57:58
- * @Descripttion: xxx
+ * @LastEditTime: 2023-10-13 09:41:52
+ * @Descripttion: 小程序基础配置 app.json
  */
 export default defineAppConfig({
   __usePrivacyCheck__: true,
@@ -19,19 +19,28 @@ export default defineAppConfig({
       {
         pagePath: 'pages/index/index',
         text: '首页',
-        // iconPath: 
-        // selectedIconPath:
+        iconPath: 'assets/nav-bar/home-not-active.png',
+        selectedIconPath: 'assets/nav-bar/home-actived.png',
       },
       {
         pagePath: 'pages/me/index',
-        text: '首页2',
+        text: '我的',
+        iconPath: 'assets/nav-bar/me-not-active.png',
+        selectedIconPath: 'assets/nav-bar/me-actived.png'
       }
     ]
   },
+  subpackages: [
+    {
+      root: 'packages/activities',
+      name: 'activities',
+      pages: ['checking'],
+    },
+  ],
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'WeChat',
-    navigationBarTextStyle: 'black'
+    navigationBarTitleText: '魔大师会员中心',
+    navigationBarTextStyle: 'black',
   }
 })

@@ -1,7 +1,7 @@
 /*
  * @Created: gongyu
  * @Date: 2023-10-10 11:47:15
- * @LastEditTime: 2023-10-13 09:41:52
+ * @LastEditTime: 2023-10-13 11:51:06
  * @Descripttion: 小程序基础配置 app.json
  */
 export default defineAppConfig({
@@ -9,6 +9,7 @@ export default defineAppConfig({
   pages: [
     'pages/index/index',
     'pages/me/index',
+    'pages/me/index-2',
   ],
   tabBar: {
     color: '#ccc',
@@ -27,7 +28,13 @@ export default defineAppConfig({
         text: '我的',
         iconPath: 'assets/nav-bar/me-not-active.png',
         selectedIconPath: 'assets/nav-bar/me-actived.png'
-      }
+      },
+      {
+        pagePath: 'pages/me/index-2',
+        text: '我的2',
+        iconPath: 'assets/nav-bar/me-not-active.png',
+        selectedIconPath: 'assets/nav-bar/me-actived.png'
+      },
     ]
   },
   subpackages: [

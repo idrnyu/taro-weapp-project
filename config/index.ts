@@ -1,11 +1,12 @@
 /*
  * @Created: gongyu
  * @Date: 2023-10-10 11:47:15
- * @LastEditTime: 2023-10-11 13:45:55
+ * @LastEditTime: 2023-10-13 11:35:21
  * @Descripttion: xxx
  */
 import Components from 'unplugin-vue-components/webpack';
 import NutUIResolver from '@nutui/nutui-taro/dist/resolver';
+import path from 'path';
 
 const config = {
   projectName: 'magic_master_member_center',
@@ -43,7 +44,13 @@ const config = {
   sass:{
     data: `@import "@nutui/nutui-taro/dist/styles/variables.scss";`
   },
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src'),
+  },
   mini: {
+    miniCssExtractPluginOption: {
+      ignoreOrder: true,
+    },
     webpackChain(chain) {
       chain.plugin('unplugin-vue-components').use(Components({
         resolvers: [NutUIResolver({taro: true})]

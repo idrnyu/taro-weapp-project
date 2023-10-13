@@ -1,29 +1,20 @@
 <!--
  * @Created: gongyu
  * @Date: 2023-10-10 11:47:15
- * @LastEditTime: 2023-10-13 10:37:41
+ * @LastEditTime: 2023-10-13 11:27:43
  * @Descripttion: 首页
 -->
 <script setup lang="ts">
 import { ref } from "vue";
 import Taro from "@tarojs/taro";
-import { My, Order } from "@nutui/icons-vue-taro";
+
+import UserInfo from "@/components/userInfo/index.vue";
 
 // definePageConfig({
 //   navigationBarTitleText: "首页",
 // });
 
 const isLogin = ref(true);
-const ragreementVisable = ref(false);
-
-const copyUserId = () => {
-  console.log("copy user id");
-  Taro.showToast({
-    title: "复制成功",
-    icon: "success",
-    duration: 2000,
-  });
-};
 
 const toActivitiesPage = (activitiesId) => {
   Taro.navigateTo({
@@ -58,26 +49,7 @@ const scanQrCode = () => {
 
 <template>
   <view class="hmoe-page">
-    <view class="user-auth__wrap" @click="ragreementVisable = true">
-      <view class="not-auth user-content" v-if="!isLogin">
-        <nut-avatar class="not-auth__avatar" bg-color="#FFF" src=""
-          ><My color="#000"
-        /></nut-avatar>
-        <text class="not-auth__placeholder">点击登录魔大师</text>
-      </view>
-      <view class="use-auth user-content" v-if="isLogin">
-        <nut-avatar class="use-auth__avatar" bg-color="#FFF" src=""
-          ><My color="#000"
-        /></nut-avatar>
-        <view class="use-auth__user-info">
-          <view class="user-name">魔大师用户1</view>
-          <view class="user-id">
-            <text>NO.MDS00011122204</text>
-            <Order color="#3a3b3a" class="copy-id-btn" @click="copyUserId" />
-          </view>
-        </view>
-      </view>
-    </view>
+    <UserInfo class="user-info__wrap"/>
     <view class="qr-code-step__wrap">
       <view class="qr-code-step__text t-c">
         <text>简单三步轻松得优惠</text>

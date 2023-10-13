@@ -1,0 +1,52 @@
+.user-auth__wrap {
+  box-sizing: border-box;
+  height: 210px;
+  border-radius: 40px;
+  background: linear-gradient(
+    180deg,
+    rgba(217, 235, 235, 1) 0%,
+    rgba(246, 241, 235, 1) 100%
+  );
+  box-shadow: 10px 10px 10px rgba(127, 127, 127, 0.349019607843137);
+  .user-content {
+    display: flex;
+    align-items: center;
+    margin: 20px 20px 0px;
+    padding-bottom: 10px;
+  }
+  .not-auth {
+    border-bottom: 2px solid #d7d7d7;
+    &__avatar {
+      width: 112px;
+      height: 112px;
+      border: 1px solid;
+      margin-right: 20px;
+    }
+    &__placeholder {
+      font-size: 36px;
+    }
+  }
+
+  .use-auth {
+    &__avatar {
+      width: 150px;
+      height: 150px;
+      border: 1px solid;
+      margin-right: 28px;
+    }
+    &__user-info {
+      font-size: 28px;
+      .user-name {
+        color: #333333;
+      }
+      .user-id {
+        margin-top: 28px;
+        color: #7f7f7f;
+        .copy-id-btn {
+          vertical-align: bottom;
+          margin-left: 28px;
+        }
+      }
+    }
+  }
+}
